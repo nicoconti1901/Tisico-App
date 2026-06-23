@@ -17,8 +17,12 @@ export type AuthResponse = {
   user: User;
 };
 
+/** Etiquetas visibles en la UI — genéricas y orientadas a la empresa */
 export const ROLE_LABELS: Record<Role, string> = {
-  OPERATOR: 'Operador',
-  SUPERVISOR: 'Supervisor',
-  ADMIN: 'Administrador',
+  OPERATOR: 'Operaciones',
+  SUPERVISOR: 'Supervisión',
+  ADMIN: 'Gestión integral',
 };
+
+export const COMPANY_PLATFORM_NAME = 'Plataforma SHE';
+export const COMPANY_TAGLINE = 'Seguridad · Calidad · Medio Ambiente';

@@ -51,17 +51,21 @@ export function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-md">
-      <CardHeader>
-        <CardTitle>Iniciar sesión</CardTitle>
-        <CardDescription>
+    <Card className="w-full max-w-md border-slate-200/80 shadow-[0_8px_40px_-12px_rgba(0,30,80,0.12)]">
+      <CardHeader className="text-center">
+        <CardTitle className="text-2xl font-bold text-slate-950">
+          Iniciar sesión
+        </CardTitle>
+        <CardDescription className="text-slate-500">
           Accedé a la plataforma SHE de tu empresa
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="font-semibold text-slate-700">
+              Email
+            </Label>
             <Input
               id="email"
               type="email"
@@ -70,10 +74,13 @@ export function LoginForm() {
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
+              className="border-slate-200 focus-visible:ring-blue-600"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="password">Contraseña</Label>
+            <Label htmlFor="password" className="font-semibold text-slate-700">
+              Contraseña
+            </Label>
             <Input
               id="password"
               type="password"
@@ -81,6 +88,7 @@ export function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="current-password"
+              className="border-slate-200 focus-visible:ring-blue-600"
             />
           </div>
           {error && (
@@ -88,7 +96,11 @@ export function LoginForm() {
               {error}
             </p>
           )}
-          <Button type="submit" className="w-full" disabled={loading}>
+          <Button
+            type="submit"
+            className="w-full bg-blue-700 font-semibold hover:bg-blue-800"
+            disabled={loading}
+          >
             {loading ? 'Ingresando...' : 'Ingresar'}
           </Button>
         </form>
