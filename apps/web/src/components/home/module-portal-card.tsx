@@ -1,142 +1,125 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { ArrowUpRight, LucideIcon } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import {
+  moduleAccentIcons,
+  moduleThemes,
+  type ModuleTheme,
+} from './module-themes';
 
 export type ModulePortalCardProps = {
   title: string;
   tagline: string;
   description: string;
   href: string;
-  icon: LucideIcon;
   features: string[];
-  variant: 'security' | 'quality';
+  variant: keyof typeof moduleThemes;
   index: number;
 };
+
+function CardBackgroundIcons({ icons }: { icons: ModuleTheme['backgroundIcons'] }) {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+      {icons.map(({ Icon, className }, i) => (
+        <Icon
+          key={i}
+          className={cn(
+            'absolute transition-transform duration-700 group-hover:scale-105',
+            className,
+          )}
+        />
+      ))}
+    </div>
+  );
+}
 
 export function ModulePortalCard({
   title,
   tagline,
   description,
   href,
-  icon: Icon,
   features,
   variant,
   index,
 }: ModulePortalCardProps) {
-  const isSecurity = variant === 'security';
+  const theme = moduleThemes[variant];
+  const AccentIcon = moduleAccentIcons[variant];
 
   return (
     <Link
       href={href}
       className={cn(
-        'group relative flex min-h-[420px] flex-col overflow-hidden rounded-3xl border p-8 transition-all duration-500 md:min-h-[480px] md:p-10',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-        isSecurity
-          ? 'border-orange-500/20 bg-linear-to-br from-orange-950 via-zinc-950 to-zinc-900 text-white hover:border-orange-400/40 hover:shadow-[0_0_80px_-12px_rgba(251,146,60,0.45)]'
-          : 'border-sky-500/20 bg-linear-to-br from-sky-950 via-zinc-950 to-indigo-950 text-white hover:border-sky-400/40 hover:shadow-[0_0_80px_-12px_rgba(56,189,248,0.45)]',
+        'group relative flex h-full min-h-[500px] flex-col overflow-hidden rounded-3xl border border-white/15 bg-slate-950/70 md:min-h-[520px]',
+        'shadow-[0_24px_60px_-16px_rgba(0,0,0,0.55)] backdrop-blur-xl',
+        'transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_36px_70px_-16px_rgba(0,0,0,0.65)]',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4',
       )}
-      style={{ animationDelay: `${index * 120}ms` }}
     >
-      {/* Mesh / glow layers */}
-      <div
-        className={cn(
-          'pointer-events-none absolute -right-16 -top-16 size-64 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-125',
-          isSecurity ? 'bg-orange-500/30' : 'bg-sky-500/30',
-        )}
-      />
-      <div
-        className={cn(
-          'pointer-events-none absolute -bottom-20 -left-10 size-56 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-110',
-          isSecurity ? 'bg-red-600/20' : 'bg-indigo-500/25',
-        )}
-      />
+      <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-sky-400 via-blue-500 to-blue-800" />
 
-      {/* Grid texture */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
+            'linear-gradient(rgba(125,211,252,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(125,211,252,0.35) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
         }}
       />
+      <div className="absolute -left-16 bottom-0 size-72 rounded-full bg-sky-500/15 blur-3xl transition-all duration-700 group-hover:bg-sky-400/25" />
 
-      {/* Watermark icon */}
-      <Icon
-        className={cn(
-          'pointer-events-none absolute -bottom-6 -right-6 size-48 opacity-[0.07] transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.12] md:size-56',
-        )}
-        strokeWidth={1}
-      />
+      <CardBackgroundIcons icons={theme.backgroundIcons} />
 
-      <div className="relative z-10 flex flex-1 flex-col">
-        <div className="flex items-start justify-between gap-4">
-          <div
-            className={cn(
-              'flex size-16 items-center justify-center rounded-2xl border backdrop-blur-sm transition-transform duration-500 group-hover:scale-105 md:size-20',
-              isSecurity
-                ? 'border-orange-400/30 bg-orange-500/20 text-orange-200'
-                : 'border-sky-400/30 bg-sky-500/20 text-sky-200',
-            )}
-          >
-            <Icon className="size-8 md:size-9" strokeWidth={1.5} />
+      {/* Velo interno para legibilidad del texto */}
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/50 to-slate-950/30" />
+
+      <div className="relative z-10 flex h-full flex-1 flex-col p-8 md:p-10">
+        {/* Cabecera — altura fija */}
+        <div className="flex h-10 shrink-0 items-center gap-3">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-sky-400/25 bg-sky-500/10 text-sky-300">
+            <AccentIcon className="size-5" />
           </div>
-          <span
-            className={cn(
-              'rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] backdrop-blur-sm',
-              isSecurity
-                ? 'border-orange-400/30 bg-orange-500/10 text-orange-200'
-                : 'border-sky-400/30 bg-sky-500/10 text-sky-200',
-            )}
-          >
-            Módulo {index + 1}
+          <span className="font-mono text-xs font-bold tracking-widest text-sky-400/90">
+            {theme.code} · 0{index + 1}
           </span>
         </div>
 
-        <div className="mt-10 flex flex-1 flex-col">
-          <p
-            className={cn(
-              'text-xs font-semibold uppercase tracking-[0.25em]',
-              isSecurity ? 'text-orange-300/80' : 'text-sky-300/80',
-            )}
-          >
+        {/* Cuerpo — áreas con altura mínima para alinear entre cards */}
+        <div className="flex flex-1 flex-col pt-8">
+          <p className="h-4 shrink-0 text-[11px] font-bold uppercase tracking-[0.3em] text-sky-400">
             {tagline}
           </p>
-          <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
+
+          <h2 className="mt-3 min-h-10 shrink-0 text-4xl font-black leading-none tracking-tight text-white md:min-h-12 md:text-5xl">
             {title}
           </h2>
-          <p className="mt-4 max-w-md text-base leading-relaxed text-white/65 md:text-lg">
+
+          <p className="mt-4 min-h-[4.75rem] max-w-sm shrink-0 text-base leading-relaxed text-slate-300 md:min-h-[5.25rem]">
             {description}
           </p>
 
-          <ul className="mt-8 flex flex-wrap gap-2">
-            {features.map((feature) => (
+          {/* Items anclados al mismo nivel en ambas cards */}
+          <ul className="mt-auto grid shrink-0 grid-cols-2 gap-2 pt-8">
+            {features.map((f) => (
               <li
-                key={feature}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm"
+                key={f}
+                className="flex min-h-10 items-center gap-2 rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-2 text-xs font-semibold text-sky-100/90 backdrop-blur-sm"
               >
-                {feature}
+                <span className="size-1.5 shrink-0 rounded-full bg-sky-400" />
+                {f}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
-          <span className="text-sm font-medium text-white/50">
-            Tocá para ingresar
+        {/* Footer — altura fija */}
+        <div className="mt-8 flex shrink-0 items-center justify-between border-t border-white/10 pt-6">
+          <span className="text-sm font-bold text-slate-400 transition-colors group-hover:text-white">
+            Ingresar al módulo
           </span>
-          <span
-            className={cn(
-              'flex size-12 items-center justify-center rounded-full border transition-all duration-500',
-              'group-hover:translate-x-1 group-hover:-translate-y-1',
-              isSecurity
-                ? 'border-orange-400/40 bg-orange-500/20 text-orange-100 group-hover:bg-orange-500 group-hover:text-white'
-                : 'border-sky-400/40 bg-sky-500/20 text-sky-100 group-hover:bg-sky-500 group-hover:text-white',
-            )}
-          >
-            <ArrowUpRight className="size-5" />
+          <span className="flex size-13 items-center justify-center rounded-xl bg-white text-slate-950 shadow-lg transition-all duration-500 group-hover:bg-sky-500 group-hover:text-white">
+            <ArrowUpRight className="size-5" strokeWidth={2.5} />
           </span>
         </div>
       </div>

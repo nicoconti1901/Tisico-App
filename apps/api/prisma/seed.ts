@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 async function main() {
   const email = process.env.SEED_ADMIN_EMAIL ?? 'admin@tisico.com';
   const password = process.env.SEED_ADMIN_PASSWORD ?? 'Admin123!';
-  const name = process.env.SEED_ADMIN_NAME ?? 'Administrador';
+  const name = process.env.SEED_ADMIN_NAME ?? 'Gestión Tisico';
 
   const existing = await prisma.user.findUnique({ where: { email } });
 
