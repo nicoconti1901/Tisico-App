@@ -1,26 +1,45 @@
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, ClipboardCheck } from 'lucide-react';
-import Link from 'next/link';
+import {
+  CalidadFutureCard,
+  CalidadSectionCard,
+} from '@/components/calidad/calidad-section-card';
+import { CalidadShell, calidadTrail } from '@/components/calidad/calidad-shell';
+import { ClipboardCheck, HardHat, Layers } from 'lucide-react';
+
+const sections = [
+  {
+    title: 'Seguimiento de obras / servicios',
+    description:
+      'Control y registro de trabajos en obra, servicios contratados y mantenimientos especializados.',
+    href: '/dashboard/calidad/seguimiento',
+    icon: HardHat,
+    available: true,
+  },
+];
 
 export default function CalidadPage() {
   return (
-    <div className="mx-auto max-w-2xl space-y-6 py-8 text-center">
-      <div className="mx-auto flex size-16 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-500">
-        <ClipboardCheck className="size-8" />
+    <CalidadShell
+      title="Módulo Calidad"
+      description="Planificación, seguimiento de obras y control de mantenimientos de calidad."
+      trail={calidadTrail({ label: 'Módulo Calidad' })}
+    >
+      <div className="grid gap-6 lg:grid-cols-2">
+        {sections.map((section) => (
+          <CalidadSectionCard key={section.href} {...section} />
+        ))}
+
+        <CalidadFutureCard
+          icon={Layers}
+          title="Próximas secciones"
+          description="Plan mensual, retorno diario y otras áreas de calidad se incorporarán en pasos siguientes."
+        />
+
+        <CalidadFutureCard
+          icon={ClipboardCheck}
+          title="Indicadores y reportes"
+          description="Tableros de avance y métricas del módulo — en desarrollo."
+        />
       </div>
-      <div className="space-y-2">
-        <h1 className="text-2xl font-bold">Calidad</h1>
-        <p className="text-muted-foreground">
-          El módulo de planificación de mantenimientos y retorno diario se
-          implementará en el próximo paso del proyecto.
-        </p>
-      </div>
-      <Link href="/dashboard">
-        <Button variant="outline">
-          <ArrowLeft className="size-4" />
-          Volver al inicio
-        </Button>
-      </Link>
-    </div>
+    </CalidadShell>
   );
 }

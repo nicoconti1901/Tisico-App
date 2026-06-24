@@ -13,6 +13,39 @@ enum Role {
   ADMIN
 }
 
+enum FindingType {
+  OBSERVACION
+  NO_CONFORMIDAD
+  INCIDENTE
+  OPORTUNIDAD_MEJORA
+}
+
+enum FindingStatus {
+  ABIERTO
+  EN_TRATAMIENTO
+  ACCION_PENDIENTE
+  CERRADO
+}
+
+enum FindingPriority {
+  BAJA
+  MEDIA
+  ALTA
+  CRITICA
+}
+
+enum ActionType {
+  CORRECTIVA
+  PREVENTIVA
+}
+
+enum CorrectiveActionStatus {
+  PENDIENTE
+  EN_CURSO
+  COMPLETADA
+  VENCIDA
+}
+
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
@@ -23,5 +56,153 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  findingsReported       Finding[]              @relation("FindingsReported")
+  findingsAssigned       Finding[]              @relation("FindingsAssigned")
+  findingViewerEntries   FindingViewer[]
+  findingAttachments     FindingAttachment[]
+  findingNotes           FindingNote[]
+  findingStatusChanges   FindingStatusHistory[]
+  correctiveActionsOwned CorrectiveAction[]
+
   @@map("users")
+}
+
+model Finding {
+  id             String          @id @default(cuid())
+  code           String          @unique
+  type           FindingType
+  status         FindingStatus   @default(ABIERTO)
+  priority       FindingPriority @default(MEDIA)
+  title          String
+  description    String          @db.Text
+  area           String?
+  sector         String?
+  locationDetail String?
+  occurredAt     DateTime?
+  typeDetails    Json            @default("{}")
+  rootCause      String?         @db.Text
+  rootCauseMeasures String?      @db.Text
+
+  /// Datos del reportante (editables al cargar; no necesariamente el usuario logueado)
+  reporterName     String
+  reporterEmail    String
+  reporterPosition String?
+
+  /// Usuario del sistema que registró el hallazgo (auditoría)
+  reporterId String
+  reporter   User   @relation("FindingsReported", fields: [reporterId], references: [id])
+  assigneeId String
+  assignee   User   @relation("FindingsAssigned", fields: [assigneeId], references: [id])
+
+  viewers              FindingViewer[]
+  externalRecipients   FindingExternalRecipient[]
+  attachments   FindingAttachment[]
+  notes         FindingNote[]
+  statusHistory FindingStatusHistory[]
+  actions       CorrectiveAction[]
+  fiveWhysSteps FiveWhysStep[]
+
+  closedAt  DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([type])
+  @@index([status])
+  @@index([assigneeId])
+  @@map("findings")
+}
+
+model FindingViewer {
+  id        String  @id @default(cuid())
+  findingId String
+  finding   Finding @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User    @relation(fields: [userId], references: [id])
+
+  @@unique([findingId, userId])
+  @@map("finding_viewers")
+}
+
+model FindingExternalRecipient {
+  id        String  @id @default(cuid())
+  findingId String
+  finding   Finding @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  email     String
+  name      String?
+
+  @@unique([findingId, email])
+  @@map("finding_external_recipients")
+}
+
+model FiveWhysStep {
+  id        String   @id @default(cuid())
+  findingId String
+  finding   Finding  @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  level     Int
+  question  String
+  answer    String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([findingId, level])
+  @@map("five_whys_steps")
+}
+
+model CorrectiveAction {
+  id            String                 @id @default(cuid())
+  findingId     String
+  finding       Finding                @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  type          ActionType
+  description   String                 @db.Text
+  dueDate       DateTime
+  status        CorrectiveActionStatus @default(PENDIENTE)
+  responsibleId String
+  responsible   User                   @relation(fields: [responsibleId], references: [id])
+  completedAt   DateTime?
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+
+  @@index([dueDate])
+  @@map("corrective_actions")
+}
+
+model FindingAttachment {
+  id           String   @id @default(cuid())
+  findingId    String
+  finding      Finding  @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  fileName     String
+  fileKey      String
+  mimeType     String
+  sizeBytes    Int
+  uploadedById String
+  uploadedBy   User     @relation(fields: [uploadedById], references: [id])
+  createdAt    DateTime @default(now())
+
+  @@map("finding_attachments")
+}
+
+model FindingNote {
+  id        String   @id @default(cuid())
+  findingId String
+  finding   Finding  @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@map("finding_notes")
+}
+
+model FindingStatusHistory {
+  id          String         @id @default(cuid())
+  findingId   String
+  finding     Finding        @relation(fields: [findingId], references: [id], onDelete: Cascade)
+  fromStatus  FindingStatus?
+  toStatus    FindingStatus
+  comment     String?
+  changedById String
+  changedBy   User           @relation(fields: [changedById], references: [id])
+  createdAt   DateTime       @default(now())
+
+  @@map("finding_status_history")
 }

@@ -6,7 +6,7 @@ function Badge({
   variant = 'default',
   ...props
 }: React.HTMLAttributes<HTMLDivElement> & {
-  variant?: 'default' | 'secondary' | 'success' | 'destructive';
+  variant?: 'default' | 'secondary' | 'success' | 'destructive' | 'outline';
 }) {
   return (
     <div
@@ -20,6 +20,8 @@ function Badge({
           'border-transparent bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300',
         variant === 'destructive' &&
           'border-transparent bg-destructive text-destructive-foreground',
+        variant === 'outline' &&
+          'border-border bg-transparent text-foreground',
         className,
       )}
       {...props}

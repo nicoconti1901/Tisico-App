@@ -5,6 +5,7 @@ import {
   COMPANY_PLATFORM_NAME,
   COMPANY_TAGLINE,
 } from '@/lib/auth-types';
+import { MousePointerClick } from 'lucide-react';
 import Image from 'next/image';
 
 const modules = [
@@ -99,13 +100,35 @@ export function DashboardModules({ accessLabel }: DashboardModulesProps) {
       </header>
 
       <div className={`${glassPanel} px-8 py-6 md:px-10`}>
-        <div className="mb-2 h-1 w-12 rounded-full bg-linear-to-r from-sky-400 to-blue-600" />
-        <h2 className="text-2xl font-black tracking-tight text-white md:text-3xl">
-          Módulos operativos
-        </h2>
-        <p className="mt-1 text-slate-300">
-          Cada área tiene su propio entorno de trabajo
-        </p>
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="mb-2 h-1 w-12 rounded-full bg-linear-to-r from-sky-400 to-blue-600" />
+            <h2 className="text-2xl font-black tracking-tight text-white md:text-3xl">
+              Accesos a módulos
+            </h2>
+            <p className="mt-1 max-w-lg text-slate-300">
+              Dos entornos de trabajo. Elegí el área en la que vas a operar hoy.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {modules.map((module, index) => (
+              <span
+                key={module.title}
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-slate-900/60 px-3 py-1.5 text-xs font-semibold text-slate-300"
+              >
+                <span className="flex size-5 items-center justify-center rounded-full bg-white/10 font-mono text-[10px] font-bold text-sky-300">
+                  {index + 1}
+                </span>
+                {module.title}
+              </span>
+            ))}
+            <span className="hidden items-center gap-1.5 text-xs font-medium text-sky-400/90 sm:inline-flex">
+              <MousePointerClick className="size-3.5" aria-hidden />
+              Clic en la tarjeta
+            </span>
+          </div>
+        </div>
       </div>
 
       <section
