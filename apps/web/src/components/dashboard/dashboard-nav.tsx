@@ -26,7 +26,11 @@ export function DashboardNav({ user }: DashboardNavProps) {
   const router = useRouter();
   const isHome = pathname === '/dashboard';
 
-  const links = [{ href: '/dashboard', label: 'Inicio' }];
+  const links = [
+    { href: '/dashboard', label: 'Inicio' },
+    { href: '/dashboard/seguridad', label: 'Seguridad' },
+    { href: '/dashboard/calidad', label: 'Calidad' },
+  ];
 
   async function handleLogout() {
     await fetch('/api/auth/logout', { method: 'POST' });
@@ -88,7 +92,10 @@ export function DashboardNav({ user }: DashboardNavProps) {
             )}
           >
             {links.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive =
+                link.href === '/dashboard'
+                  ? pathname === '/dashboard'
+                  : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
