@@ -63,6 +63,7 @@ model User {
   findingNotes           FindingNote[]
   findingStatusChanges   FindingStatusHistory[]
   correctiveActionsOwned CorrectiveAction[]
+  cieTaskReturns         CieTaskReturn[]
 
   @@map("users")
 }
@@ -205,4 +206,126 @@ model FindingStatusHistory {
   createdAt   DateTime       @default(now())
 
   @@map("finding_status_history")
+}
+
+// --- Módulo CIE (Calidad / Incendios) ---
+
+enum CieWorkGroup {
+  G1
+  G2
+}
+
+enum CieActivityType {
+  LIMPIEZA
+  INSPECCION_VISUAL
+  PRUEBA_ELEMENTOS
+  CALIBRACION
+}
+
+enum CieReturnStatus {
+  TERM
+  CONT
+  CANC
+  FDM
+  FMO
+  INSP
+  FCL
+  SEG
+  CTR
+  EPT
+  EDE
+  FEM
+  PGR
+  IOOM
+  IOOX
+  IOOE
+  IOOI
+  PP0
+  PLN
+  CONM
+  CONE
+  CALC
+  PTD
+}
+
+model CieScheduleConfig {
+  id             String @id @default("default")
+  horizonEndYear Int    @default(2028)
+
+  @@map("cie_schedule_config")
+}
+
+model CieHoliday {
+  id       String   @id @default(cuid())
+  date     DateTime @db.Date
+  name     String
+  isBridge Boolean  @default(false)
+
+  @@unique([date])
+  @@map("cie_holidays")
+}
+
+model CieTaskTemplate {
+  id               String            @id @default(cuid())
+  workGroup        CieWorkGroup
+  businessDayIndex Int
+  sortOrder        Int
+  programOrder     Int?
+  workOrder        String?
+  equipment        String?
+  plant            String?
+  description      String            @db.Text
+  company          String            @default("TISICO FIRE&GAS")
+  durationHours    Int               @default(4)
+  activityTypes    CieActivityType[]
+
+  scheduledTasks CieScheduledTask[]
+
+  @@index([workGroup, businessDayIndex])
+  @@map("cie_task_templates")
+}
+
+model CieScheduledTask {
+  id                    String            @id @default(cuid())
+  templateId            String?
+  template              CieTaskTemplate?  @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  workGroup             CieWorkGroup
+  scheduledDate         DateTime          @db.Date
+  year                  Int
+  month                 Int
+  businessDayIndex      Int
+  sortOrder             Int
+  programOrder          Int?
+  workOrder             String?
+  equipment             String?
+  plant                 String?
+  description           String            @db.Text
+  company               String            @default("TISICO FIRE&GAS")
+  durationHours         Int
+  activityTypes         CieActivityType[]
+  isRescheduled         Boolean           @default(false)
+  originalScheduledDate DateTime?         @db.Date
+  rescheduleReason      String?
+
+  returns CieTaskReturn[]
+
+  @@index([workGroup, scheduledDate])
+  @@index([year, month])
+  @@map("cie_scheduled_tasks")
+}
+
+model CieTaskReturn {
+  id              String          @id @default(cuid())
+  scheduledTaskId String
+  scheduledTask   CieScheduledTask @relation(fields: [scheduledTaskId], references: [id], onDelete: Cascade)
+  returnDate      DateTime        @db.Date
+  status          CieReturnStatus
+  observations    String?         @db.Text
+  submittedById   String
+  submittedBy     User            @relation(fields: [submittedById], references: [id])
+  submittedAt     DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@unique([scheduledTaskId, returnDate])
+  @@map("cie_task_returns")
 }
