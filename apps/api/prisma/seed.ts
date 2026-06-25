@@ -1,5 +1,6 @@
 import { PrismaClient, Role } from '@prisma/client';
 import * as bcrypt from 'bcrypt';
+import { seedCie } from './seed-cie';
 
 const prisma = new PrismaClient();
 
@@ -10,23 +11,22 @@ async function main() {
 
   const existing = await prisma.user.findUnique({ where: { email } });
 
-  if (existing) {
+  if (!existing) {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await prisma.user.create({
+      data: {
+        email,
+        name,
+        password: hashedPassword,
+        role: Role.ADMIN,
+      },
+    });
+    console.log(`Admin creado: ${email}`);
+  } else {
     console.log(`Admin ya existe: ${email}`);
-    return;
   }
 
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  await prisma.user.create({
-    data: {
-      email,
-      name,
-      password: hashedPassword,
-      role: Role.ADMIN,
-    },
-  });
-
-  console.log(`Admin creado: ${email}`);
+  await seedCie(prisma);
 }
 
 main()

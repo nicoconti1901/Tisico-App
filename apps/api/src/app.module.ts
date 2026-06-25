@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
+import { CieModule } from './cie/cie.module';
 import { FindingsModule } from './findings/findings.module';
 import { HealthModule } from './health/health.module';
 import { MailModule } from './mail/mail.module';
@@ -22,6 +23,7 @@ import { UsersModule } from './users/users.module';
     AuthModule,
     UsersModule,
     FindingsModule,
+    CieModule,
     MailModule,
     StorageModule,
     HealthModule,

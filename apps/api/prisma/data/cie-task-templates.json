@@ -1,0 +1,827 @@
+[
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 1,
+    "sortOrder": 0,
+    "programOrder": 1,
+    "workOrder": "801306858",
+    "equipment": "VESDA /3030",
+    "plant": "SSA(POLIB/MALEIC)",
+    "description": "Prvo Sist Fire & Gas - SUBESTACIONES. Detección humo/Aspiracion",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 1,
+    "sortOrder": 1,
+    "programOrder": null,
+    "workOrder": "PTNI POLIB.",
+    "equipment": "RADIONICS / NOTIF",
+    "plant": "POLIB",
+    "description": "Prvo Sist Fire & Gas - Sala Ctrol  POLIB / Archivo Tecnico. Detección humo",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 2,
+    "sortOrder": 2,
+    "programOrder": 2,
+    "workOrder": "PTNI PIB - MALEIC",
+    "equipment": "DCS",
+    "plant": "POLIB / MALEIC",
+    "description": "Prvo Sist Fire & Gas - Maleic- Detección de mezcla explosiva.Polibuteno- Detección de mezcla explosiva / Nh3",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 3,
+    "sortOrder": 3,
+    "programOrder": 3,
+    "workOrder": "PTNI SSA",
+    "equipment": "VESDA /3030",
+    "plant": "SSA (ARO)",
+    "description": "Prvo Sist Fire & Gas - SE 1014. Detección de humo convencional, aspiración, sistema extinción x CO2",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 4,
+    "sortOrder": 4,
+    "programOrder": 4,
+    "workOrder": "PTNI SSA",
+    "equipment": "VESDA /3030",
+    "plant": "SSA  (1019/Usina)",
+    "description": "Prvo Sist Fire & Gas - SE 1019 / Usina. Detección de humo convencional, aspiración, sistema extinción x CO2",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 5,
+    "sortOrder": 5,
+    "programOrder": 5,
+    "workOrder": "PTNI - LOGOP",
+    "equipment": "EQP",
+    "plant": "LOGOP(LPG)",
+    "description": "Prvo Sist Fire & Gas - LPG. Detección de mezcla explosiva-Puntuales.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 6,
+    "sortOrder": 6,
+    "programOrder": 6,
+    "workOrder": "PTNI - LOGOP",
+    "equipment": "EQP",
+    "plant": "LOGOP(LPG)",
+    "description": "Prvo Sist Fire & Gas - LPG. Detección de mezcla explosiva camino abierto, Pantallas diluvios",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 7,
+    "sortOrder": 7,
+    "programOrder": 7,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - S-1100. Detección mezcla explosiva, pantalla diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 8,
+    "sortOrder": 8,
+    "programOrder": 8,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "ARO-(Magna)",
+    "description": "Prvo Sist Fire & Gas - U-100. Detección de mezcla explosiva H2,  H2S, sistemas diluvios,Deteccion de Llama.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 9,
+    "sortOrder": 9,
+    "programOrder": 9,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "ARO-(Magna)",
+    "description": "Prvo Sist Fire & Gas -U-1700/1800. Detección de llama y avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 10,
+    "sortOrder": 10,
+    "programOrder": 10,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "ARO-(Magna)",
+    "description": "Prvo Sist Fire & Gas -U-1700/1800. Detección de H2",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 11,
+    "sortOrder": 11,
+    "programOrder": 11,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "ARO-(Magna)",
+    "description": "Prvo Sist Fire & Gas -U-1700/1800. Detección de mezcla explosiva,  H2S, sistemas diluvios",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 12,
+    "sortOrder": 12,
+    "programOrder": 12,
+    "workOrder": "PTNI SSA",
+    "equipment": "EQP / NFS 320 /3030",
+    "plant": "SSA (ARO)",
+    "description": "Prvo Sist Fire & Gas - SE 1015. Detección de humo convencional y por aspiración",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 13,
+    "sortOrder": 13,
+    "programOrder": 13,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP / NFS 320 /3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - SE 1020.Sistema de diluvio, deteccion térmica, mezcla explosiva y avisadores manuales .",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 14,
+    "sortOrder": 14,
+    "programOrder": 14,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas -Reactor K-903/Ptos químicos. Detección de mezcla explosiva e H2 , detección de llama y avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 15,
+    "sortOrder": 15,
+    "programOrder": 15,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas - Comp V-901/902. Detecc de H2, avisadores manuales, llama y diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 16,
+    "sortOrder": 16,
+    "programOrder": 16,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas -Válvulas L.B / Drenajes. Detección  H2, deteccion de llama, avisadores manuales y sistemas diluvios.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 6,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 16,
+    "sortOrder": 17,
+    "programOrder": null,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas -Condensador M-902/ Enfriador M-904-906. Detección de  H2, llama, avisadores manuales, sistemas diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 17,
+    "sortOrder": 18,
+    "programOrder": 17,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas - Skid PSA /Comp V-903 Deteccion de H2, llama, Av.Manuales y Sist Diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 18,
+    "sortOrder": 19,
+    "programOrder": 18,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas -Hornos L-901/L-902/ L-903. Mezcla explosiva, deteccion de llama, avisadores manuales,Sist diluvios .",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G1",
+    "businessDayIndex": 19,
+    "sortOrder": 20,
+    "programOrder": 19,
+    "workOrder": "PTNI ARO",
+    "equipment": "EQP",
+    "plant": "CCR",
+    "description": "Pvo Sist Fire & Gas - Separadores/enfriadores, detección de H2, llama, avisadores manuales y sistemas de diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 1,
+    "sortOrder": 0,
+    "programOrder": 1,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - PAO. Detección sala control",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 1,
+    "sortOrder": 1,
+    "programOrder": null,
+    "workOrder": "PTNI LOGOP",
+    "equipment": "3030",
+    "plant": "LOGOP(PAO)",
+    "description": "Prvo Sist Fire & Gas - Cargadero U-2800. Sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 2,
+    "sortOrder": 2,
+    "programOrder": null,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2500. Avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 2,
+    "sortOrder": 3,
+    "programOrder": null,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030/EQP",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas -U-2400 Av. manuales - U-2600. Detección mezcla explosiva, H2, avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 3,
+    "sortOrder": 4,
+    "programOrder": 3,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - Salas de paso 2040/41/42/43.Deteccion de humo, avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 4,
+    "sortOrder": 5,
+    "programOrder": 4,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2200. Avisadores manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 4,
+    "sortOrder": 6,
+    "programOrder": null,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2100/3600. Avisadores manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 5,
+    "sortOrder": 7,
+    "programOrder": 5,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2900.Antorcha. Avisadores manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 5,
+    "sortOrder": 8,
+    "programOrder": null,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2300. Avisadores manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 6,
+    "sortOrder": 9,
+    "programOrder": 6,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - U-2000-U-2700. Avisadores manuales, sistema diluvio.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 1,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 6,
+    "sortOrder": 10,
+    "programOrder": null,
+    "workOrder": "PTNI PAO",
+    "equipment": "CDTI/3030/EQP",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - Pileta API. Avisadores manuales, detección de llama, mezcla explosiva",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 7,
+    "sortOrder": 11,
+    "programOrder": 7,
+    "workOrder": "PTNI LOGOP",
+    "equipment": "CDTI/3030",
+    "plant": "LOGOP(PAO)",
+    "description": "Prvo Sist Fire & Gas - Parque Tanques. Avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 7,
+    "sortOrder": 12,
+    "programOrder": null,
+    "workOrder": "PTNI SSA",
+    "equipment": "CDTI/3030",
+    "plant": "SSA (PAO)",
+    "description": "Prvo Sist Fire & Gas - SE 2030. Av. Manuales, detección de humo, térmicos, mezcla explosiva, H2 sala de baterías",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 7,
+    "sortOrder": 13,
+    "programOrder": null,
+    "workOrder": "PTNI SSA",
+    "equipment": "CDTI/3030",
+    "plant": "SSA (PAO)",
+    "description": "Prvo Sist Fire & Gas - SE 2031. Av. Manuales, detección de humo, térmicos, mezcla explosiva, H2 sala de baterías",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 8,
+    "sortOrder": 14,
+    "programOrder": 8,
+    "workOrder": "PTNI SSA",
+    "equipment": "NOTF320/EQP",
+    "plant": "SSA (ARO)",
+    "description": "Prvo Sist Fire & Gas - SE 192. Av. manuales, sistemas diluvio, detección mezcla explosiva, H2, detección de incendio/aspiración",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 9,
+    "sortOrder": 15,
+    "programOrder": 9,
+    "workOrder": "PTNI LOGOP",
+    "equipment": "3030/EQP",
+    "plant": "LPG",
+    "description": "Prvo Sist Fire & Gas - LPG (ARO-PAO-CARGADERO). Sistema de diluvio, avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 9,
+    "sortOrder": 16,
+    "programOrder": null,
+    "workOrder": "PTNI Maleico/Poli",
+    "equipment": "3030",
+    "plant": "Maleic/Polib",
+    "description": "Prvo Sist Fire & Gas - Maleic/Polib. Sistemas de diluvios.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 10,
+    "sortOrder": 17,
+    "programOrder": 10,
+    "workOrder": "PTNI ARO",
+    "equipment": "3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - B-1009. Av. Manuales, detección de humo,",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 10,
+    "sortOrder": 18,
+    "programOrder": null,
+    "workOrder": "PTNI ARO",
+    "equipment": "3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - U-200/300/500/600/700/1300. Av. Manuales.Sistema de diluvio.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 11,
+    "sortOrder": 19,
+    "programOrder": 11,
+    "workOrder": "PTNI ARO",
+    "equipment": "3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - U-100/400/800. Av. manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 11,
+    "sortOrder": 20,
+    "programOrder": null,
+    "workOrder": "PTNI ARO",
+    "equipment": "3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - U-1100. Av. manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 12,
+    "sortOrder": 21,
+    "programOrder": 12,
+    "workOrder": "PTNI LOGOP",
+    "equipment": "3030",
+    "plant": "LOGOP(ARO)",
+    "description": "Prvo Sist Fire & Gas - U-1000. Avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 6,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 12,
+    "sortOrder": 22,
+    "programOrder": null,
+    "workOrder": "PTNI SSA",
+    "equipment": "3030",
+    "plant": "SSA ( Calderas)",
+    "description": "Prvo Sist Fire & Gas - Calderas. Avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 2,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 13,
+    "sortOrder": 23,
+    "programOrder": 13,
+    "workOrder": "PTNI LOGOP",
+    "equipment": "3030",
+    "plant": "LOGOP(ARO)",
+    "description": "Prvo Sist Fire & Gas - ARO.Parque de Tanques. Avisadores manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 14,
+    "sortOrder": 24,
+    "programOrder": 14,
+    "workOrder": "PTF MANUAL",
+    "equipment": "3030",
+    "plant": "Almacenes",
+    "description": "Prvo Sist Fire & Gas - Almacenes. Detección de humo y av manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 15,
+    "sortOrder": 25,
+    "programOrder": 15,
+    "workOrder": "PTNI ARO",
+    "equipment": "3030",
+    "plant": "ARO",
+    "description": "Prvo Sist Fire & Gas - ARO Antorcha. Av. manuales, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 15,
+    "sortOrder": 26,
+    "programOrder": null,
+    "workOrder": "PTNI SSA",
+    "equipment": "3030",
+    "plant": "SSA (ARO)",
+    "description": "Prvo Sist Fire & Gas - SE 1010/11. Detección de humo y av manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 15,
+    "sortOrder": 27,
+    "programOrder": null,
+    "workOrder": "PTNI SSA",
+    "equipment": "3030",
+    "plant": "SSA (ARO)",
+    "description": "Prvo Sist Fire & Gas - SE 1012/17. Detección de humo y av manuales",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 16,
+    "sortOrder": 28,
+    "programOrder": 16,
+    "workOrder": "sin permiso",
+    "equipment": "3030",
+    "plant": "Area Mantenimiento",
+    "description": "Prvo Sist Fire & Gas - Depto. Seguridad. Detección incendios",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 16,
+    "sortOrder": 29,
+    "programOrder": null,
+    "workOrder": "sin permiso",
+    "equipment": "3030",
+    "plant": null,
+    "description": "Prvo Sist Fire & Gas - Anfiteatro/Administración/Ofic.ECOM. Detección incendios",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 17,
+    "sortOrder": 30,
+    "programOrder": 17,
+    "workOrder": "sin permiso",
+    "equipment": "3030",
+    "plant": "Area Mantenimiento",
+    "description": "Prvo Sist Fire & Gas - Verif Eq-Ofic/archivo 1er piso.Dpto Bomberos. Detección incendios.Av.manuales.",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 18,
+    "sortOrder": 31,
+    "programOrder": 18,
+    "workOrder": "PTNI PAO",
+    "equipment": "3030",
+    "plant": "PAO",
+    "description": "Prvo Sist Fire & Gas - Sala Bbas J6700 A/B. Av manuales, detección de llama,Detec.termicos",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 18,
+    "sortOrder": 32,
+    "programOrder": null,
+    "workOrder": "PTF MANUAL",
+    "equipment": "SP2042/EQP",
+    "plant": "Almacenes- Depo N°3",
+    "description": "Prvo Sist Fire & Gas - Alma Depo N°3. Av manuales, detección de llama, sistema diluvio",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 4,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  },
+  {
+    "workGroup": "G2",
+    "businessDayIndex": 19,
+    "sortOrder": 33,
+    "programOrder": 19,
+    "workOrder": "PTNI ARO",
+    "equipment": "TFT",
+    "plant": "CCR",
+    "description": "Prvo Sist Fire & Gas - CCR Monitores telecomandados",
+    "company": "TISICO FIRE&GAS",
+    "durationHours": 8,
+    "activityTypes": [
+      "INSPECCION_VISUAL"
+    ]
+  }
+]
